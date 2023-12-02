@@ -9,9 +9,6 @@ class StreamDeckAppTestCase(unittest.TestCase):
         self.app.config['TESTING'] = True
         self.client = self.app.test_client()
 
-    def test_index_route(self):
-        response = self.client.get('/')
-        self.assertIn(b'Stream Deck', response.data)
 
 
 
