@@ -12,6 +12,34 @@ class StreamDeckAppTestCase(unittest.TestCase):
 
 
 
+    def tearDown(self):
+        # Clean up after each test
+        pass
+
+    def test_dummy_pass_1(self):
+        # This is a dummy test that always passes
+        self.assertTrue(True)
+
+    def test_dummy_pass_2(self):
+        # Another dummy test that always passes
+        self.assertEqual(2 + 2, 4)
+
+    def test_dummy_pass_3(self):
+        # Yet another dummy test that always passes
+        self.assertIn('dummy', 'dummy test')
+
+    def test_dummy_pass_4(self):
+        # A dummy test using a context manager
+        with self.subTest():
+            self.assertTrue(True)
+
+    def test_dummy_pass_5(self):
+        # A dummy test with a custom assertion message
+        self.fail("This test fails to demonstrate a custom failure message, but it will pass.")
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
 
