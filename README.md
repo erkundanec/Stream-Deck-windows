@@ -1,5 +1,6 @@
 
 # Stream Deck
+[![CI](https://github.com/manish-jsx/stream-deck/actions/workflows/python-app.yml/badge.svg)](https://github.com/manish-jsx/stream-deck/actions/workflows/python-app.yml)
 
 Create your own customizable Stream Deck using Flask, HTML/CSS with Flexbox, and JavaScript.
 
