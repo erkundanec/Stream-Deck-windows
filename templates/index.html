@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Stream Deck</title>
+</head>
+<body>
+    <div class="stream-deck">
+        <button class="stream-button" onclick="handleButtonClick(1)">Button 1</button>
+        <button class="stream-button" onclick="handleButtonClick(2)">Button 2</button>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <script>
+        function handleButtonClick(buttonNumber) {
+            // Implement your action for each button here
+            console.log('Button ' + buttonNumber + ' clicked!');
+        }
+    </script>
+</body>
+</html>
