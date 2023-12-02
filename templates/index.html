@@ -8,16 +8,35 @@
 </head>
 <body>
     <div class="stream-deck">
-        <button class="stream-button" onclick="handleButtonClick(1)">Button 1</button>
-        <button class="stream-button" onclick="handleButtonClick(2)">Button 2</button>
+        <button class="stream-button" onclick="launchApplication('notepad.exe')">Launch Notepad</button>
+        <button class="stream-button" onclick="launchApplication('calc.exe')">Launch Calculator</button>
+        <button class="stream-button" onclick="performSystemCommand('shutdown /s /t 0')">Shutdown</button>
+        <button class="stream-button" onclick="openWebsite('https://www.example.com')">Open Example Website</button>
         <!-- Add more buttons as needed -->
     </div>
 
     <script>
-        function handleButtonClick(buttonNumber) {
-            // Implement your action for each button here
-            console.log('Button ' + buttonNumber + ' clicked!');
+        function launchApplication(applicationName) {
+            fetch(`/launch/${applicationName}`)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function performSystemCommand(command) {
+            fetch(`/system/${command}`)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function openWebsite(websiteUrl) {
+            fetch(`/open/${websiteUrl}`)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.error('Error:', error));
         }
     </script>
 </body>
 </html>
+
