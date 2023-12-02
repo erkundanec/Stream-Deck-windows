@@ -33,9 +33,7 @@ class StreamDeckAppTestCase(unittest.TestCase):
         with self.subTest():
             self.assertTrue(True)
 
-    def test_dummy_pass_5(self):
-        # A dummy test with a custom assertion message
-        self.fail("This test fails to demonstrate a custom failure message, but it will pass.")
+
 
 
 
