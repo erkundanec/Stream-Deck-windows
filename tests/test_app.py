@@ -1,6 +1,5 @@
 import unittest
 from flask import Flask, url_for
-from flask.testing import FlaskTestClient
 
 class StreamDeckAppTestCase(unittest.TestCase):
 
@@ -8,7 +7,7 @@ class StreamDeckAppTestCase(unittest.TestCase):
         # Create a test Flask app
         self.app = Flask(__name__)
         self.app.config['TESTING'] = True
-        self.client: FlaskTestClient = self.app.test_client()
+        self.client = self.app.test_client()
 
     def test_index_route(self):
         response = self.client.get('/')
