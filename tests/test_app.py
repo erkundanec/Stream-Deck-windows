@@ -1,5 +1,6 @@
 import unittest
 from flask import Flask, url_for
+from flask.testing import FlaskTestClient
 
 class StreamDeckAppTestCase(unittest.TestCase):
 
@@ -16,8 +17,8 @@ class StreamDeckAppTestCase(unittest.TestCase):
     def test_static_file(self):
         # Set up a test request context
         with self.app.test_request_context():
-             response = self.client.get(url_for('static', filename='styles.css'))
-             self.assertIn(b'body', response.data)
+            response = self.client.get(url_for('static', filename='styles.css'))
+            self.assertIn(b'body', response.data)
 
 if __name__ == '__main__':
     unittest.main()
